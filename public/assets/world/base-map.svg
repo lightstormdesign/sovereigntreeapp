@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <!--
+    PLACEHOLDER base map. Swap for the Figma export (base-map.png, 2048x1024 @1x / 4096x2048 @2x).
+    Keep the same canvas size: village x/y positions in src/data/villages.js are pixels on this canvas.
+    Static art only. Ambient motion lives in src/explore/ambient.js, not baked in here.
+  -->
+  <defs>
+    <radialGradient id="sea" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#3fb8b0"/>
+      <stop offset="0.7" stop-color="#2a7f95"/>
+      <stop offset="1" stop-color="#244f73"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fcf6a"/>
+      <stop offset="1" stop-color="#5e9e48"/>
+    </linearGradient>
+    <linearGradient id="cliff" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b07a4f"/>
+      <stop offset="1" stop-color="#7a4f33"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <pattern id="geo" width="120" height="104" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#fff6d8" stroke-opacity="0.07" stroke-width="1.5">
+        <circle cx="60" cy="52" r="30"/>
+        <circle cx="30" cy="52" r="30"/>
+        <circle cx="90" cy="52" r="30"/>
+        <circle cx="45" cy="26" r="30"/>
+        <circle cx="75" cy="26" r="30"/>
+        <circle cx="45" cy="78" r="30"/>
+        <circle cx="75" cy="78" r="30"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- No backdrop rect: the magic-hour sky is the page background, so the board floats with no hard edge. -->
+  <!-- ocean board -->
+  <ellipse cx="1024" cy="512" rx="980" ry="470" fill="url(#sea)"/>
+  <ellipse cx="1024" cy="512" rx="980" ry="470" fill="url(#geo)"/>
+
+  <!-- continent masses: soft shadow, cliff side, grass top (light from upper-left) -->
+  <g id="continents">
+    <!-- Americas -->
+    <g>
+      <path d="M330 210 C420 150 560 170 600 250 C640 330 560 380 520 440 C500 480 560 520 560 600 C560 700 500 800 440 830 C400 850 380 800 400 740 C420 660 360 600 330 540 C300 470 250 420 260 330 C265 270 290 235 330 210Z" fill="#163a52" opacity="0.45" filter="url(#soft)" transform="translate(16 22)"/>
+      <path d="M330 210 C420 150 560 170 600 250 C640 330 560 380 520 440 C500 480 560 520 560 600 C560 700 500 800 440 830 C400 850 380 800 400 740 C420 660 360 600 330 540 C300 470 250 420 260 330 C265 270 290 235 330 210Z" fill="url(#cliff)" transform="translate(0 14)"/>
+      <path d="M330 210 C420 150 560 170 600 250 C640 330 560 380 520 440 C500 480 560 520 560 600 C560 700 500 800 440 830 C400 850 380 800 400 740 C420 660 360 600 330 540 C300 470 250 420 260 330 C265 270 290 235 330 210Z" fill="url(#land)" stroke="#2b1f3a" stroke-opacity="0.55" stroke-width="3"/>
+    </g>
+    <!-- Europe / Africa -->
+    <g>
+      <path d="M940 200 C1010 160 1110 180 1120 240 C1130 290 1080 320 1090 360 C1150 380 1200 430 1190 520 C1180 620 1120 720 1060 760 C1010 790 980 740 990 680 C1000 620 940 580 920 520 C900 460 880 420 900 380 C870 330 880 240 940 200Z" fill="#163a52" opacity="0.45" filter="url(#soft)" transform="translate(16 22)"/>
+      <path d="M940 200 C1010 160 1110 180 1120 240 C1130 290 1080 320 1090 360 C1150 380 1200 430 1190 520 C1180 620 1120 720 1060 760 C1010 790 980 740 990 680 C1000 620 940 580 920 520 C900 460 880 420 900 380 C870 330 880 240 940 200Z" fill="url(#cliff)" transform="translate(0 14)"/>
+      <path d="M940 200 C1010 160 1110 180 1120 240 C1130 290 1080 320 1090 360 C1150 380 1200 430 1190 520 C1180 620 1120 720 1060 760 C1010 790 980 740 990 680 C1000 620 940 580 920 520 C900 460 880 420 900 380 C870 330 880 240 940 200Z" fill="url(#land)" stroke="#2b1f3a" stroke-opacity="0.55" stroke-width="3"/>
+    </g>
+    <!-- Asia -->
+    <g>
+      <path d="M1180 190 C1300 140 1500 150 1640 200 C1740 240 1760 320 1700 370 C1640 420 1560 400 1520 450 C1480 500 1420 500 1380 470 C1330 430 1260 440 1220 400 C1170 350 1110 250 1180 190Z" fill="#163a52" opacity="0.45" filter="url(#soft)" transform="translate(16 22)"/>
+      <path d="M1180 190 C1300 140 1500 150 1640 200 C1740 240 1760 320 1700 370 C1640 420 1560 400 1520 450 C1480 500 1420 500 1380 470 C1330 430 1260 440 1220 400 C1170 350 1110 250 1180 190Z" fill="url(#cliff)" transform="translate(0 14)"/>
+      <path d="M1180 190 C1300 140 1500 150 1640 200 C1740 240 1760 320 1700 370 C1640 420 1560 400 1520 450 C1480 500 1420 500 1380 470 C1330 430 1260 440 1220 400 C1170 350 1110 250 1180 190Z" fill="url(#land)" stroke="#2b1f3a" stroke-opacity="0.55" stroke-width="3"/>
+    </g>
+    <!-- Oceania -->
+    <g>
+      <path d="M1560 640 C1630 600 1740 610 1780 660 C1820 710 1790 780 1720 800 C1650 820 1580 800 1550 750 C1525 710 1520 665 1560 640Z" fill="#163a52" opacity="0.45" filter="url(#soft)" transform="translate(16 22)"/>
+      <path d="M1560 640 C1630 600 1740 610 1780 660 C1820 710 1790 780 1720 800 C1650 820 1580 800 1550 750 C1525 710 1520 665 1560 640Z" fill="url(#cliff)" transform="translate(0 14)"/>
+      <path d="M1560 640 C1630 600 1740 610 1780 660 C1820 710 1790 780 1720 800 C1650 820 1580 800 1550 750 C1525 710 1520 665 1560 640Z" fill="url(#land)" stroke="#2b1f3a" stroke-opacity="0.55" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- terraced texture hints -->
+  <g fill="none" stroke="#4f8a3c" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round">
+    <path d="M360 300 q60 -20 120 0"/><path d="M350 330 q70 -20 140 0"/>
+    <path d="M980 470 q50 -15 100 0"/><path d="M990 500 q50 -15 100 0"/>
+    <path d="M1300 260 q80 -20 160 0"/><path d="M1320 290 q80 -20 160 0"/>
+    <path d="M1600 690 q60 -15 120 0"/>
+  </g>
+</svg>

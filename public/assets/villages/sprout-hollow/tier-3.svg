@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="256" viewBox="0 0 320 256">
+  <!--
+    PLACEHOLDER village asset, tier 3 (close zoom, full detail). 320x256 @1x.
+    Follows docs/STYLE_GUIDE.md: light from upper-left, baked shadow falling lower-right,
+    ground anchor at (160, 218), soft irregular edge, transparent background.
+    Replace with the Figma export: tier-3.png (same canvas size and anchor).
+  -->
+  <defs>
+    <filter id="shadow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a6dc78"/>
+      <stop offset="1" stop-color="#5f9f45"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98457"/>
+      <stop offset="1" stop-color="#6e4630"/>
+    </linearGradient>
+    <linearGradient id="pond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fe3e0"/>
+      <stop offset="1" stop-color="#3a9fb4"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fbff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#9fd8e6" stop-opacity="0.75"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- baked shadow -->
+  <ellipse cx="172" cy="226" rx="128" ry="22" fill="#1b2a3f" opacity="0.45" filter="url(#shadow)"/>
+
+  <!-- island body: cliff side, then grass top with irregular edge -->
+  <path d="M38 150 C40 190 90 222 160 224 C230 222 282 196 284 152 L284 140 L38 140 Z" fill="url(#side)" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+  <path d="M40 140 C34 112 72 86 120 82 C150 70 196 72 222 84 C262 90 292 112 282 142 C276 166 228 182 160 182 C96 182 46 166 40 140 Z" fill="url(#top)" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+
+  <!-- terraced food-forest rows -->
+  <g fill="none" stroke="#4c8a37" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <path d="M70 140 q40 -10 80 0"/><path d="M78 154 q40 -10 80 0"/><path d="M92 167 q36 -8 70 0"/>
+  </g>
+  <g fill="#3f7d34">
+    <circle cx="80" cy="132" r="6"/><circle cx="100" cy="130" r="7"/><circle cx="122" cy="133" r="6"/>
+    <circle cx="96" cy="148" r="5"/><circle cx="116" cy="146" r="6"/><circle cx="138" cy="148" r="5"/>
+  </g>
+
+  <!-- rainwater catchment pond -->
+  <ellipse cx="212" cy="152" rx="34" ry="12" fill="url(#pond)" stroke="#2b1f3a" stroke-opacity="0.5" stroke-width="2.5"/>
+  <path d="M196 150 q8 -3 16 0 M214 155 q8 -3 14 0" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- geodesic greenhouse dome -->
+  <g>
+    <path d="M150 124 a30 30 0 0 1 60 0 Z" fill="url(#glass)" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+    <g stroke="#5a9fb2" stroke-width="1.5" fill="none" opacity="0.8">
+      <path d="M156 110 L204 110 M162 100 L198 100 M180 94 L162 124 M180 94 L198 124 M168 104 L180 124 L192 104"/>
+    </g>
+    <ellipse cx="180" cy="124" rx="32" ry="5" fill="#2b1f3a" opacity="0.25"/>
+  </g>
+
+  <!-- cob roundhouse with living roof + solar panel -->
+  <g>
+    <rect x="226" y="104" width="34" height="26" rx="6" fill="#e2b98a" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M220 106 Q243 82 266 106 Z" fill="#6fae4f" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+    <rect x="238" y="114" width="10" height="16" rx="3" fill="#7a4f33"/>
+    <g transform="translate(232 70) skewX(-18)">
+      <rect width="30" height="16" fill="#2f4f7f" stroke="#2b1f3a" stroke-opacity="0.7" stroke-width="2"/>
+      <path d="M10 0 V16 M20 0 V16 M0 8 H30" stroke="#8fb7e6" stroke-width="1"/>
+    </g>
+    <path d="M247 86 V96" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2"/>
+  </g>
+
+  <!-- wind turbine (blades are a separate group so Rive can drive the spin) -->
+  <g id="turbine">
+    <path d="M84 120 L88 46 L92 120 Z" fill="#f4f1ea" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2.5"/>
+    <g id="blades" transform="translate(88 46)">
+      <path d="M0 0 L-3 -38 Q0 -42 3 -38 Z" fill="#ffffff" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2"/>
+      <path d="M0 0 L-3 -38 Q0 -42 3 -38 Z" fill="#ffffff" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2" transform="rotate(120)"/>
+      <path d="M0 0 L-3 -38 Q0 -42 3 -38 Z" fill="#ffffff" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2" transform="rotate(240)"/>
+      <circle r="4" fill="#d9d4c7" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- the sovereign tree: heart of the village, glows softly -->
+  <circle cx="150" cy="78" r="46" fill="url(#glow)"/>
+  <path d="M146 120 C146 104 144 96 140 88 M154 120 C154 104 156 96 160 88" stroke="#6e4630" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M150 120 V84" stroke="#6e4630" stroke-width="8" stroke-linecap="round"/>
+  <path d="M112 74 C108 50 132 34 150 40 C170 30 196 46 190 70 C200 88 176 102 158 96 C140 104 112 96 112 74 Z" fill="#4f9a3f" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="3"/>
+  <path d="M126 64 C128 52 142 46 152 50" stroke="#9fdc76" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <g fill="#ffe9a8">
+    <circle cx="134" cy="72" r="2.5"/><circle cx="168" cy="62" r="2.5"/><circle cx="160" cy="84" r="2"/><circle cx="178" cy="78" r="2"/>
+  </g>
+</svg>

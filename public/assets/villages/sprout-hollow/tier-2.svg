@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="128" viewBox="0 0 160 128">
+  <!--
+    PLACEHOLDER village asset, tier 2 (mid zoom, simplified). 160x128 @1x, ground anchor (80, 109).
+    Same silhouette as tier 3, with small detail removed and shapes and outlines kept readable.
+  -->
+  <defs>
+    <filter id="shadow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a6dc78"/><stop offset="1" stop-color="#5f9f45"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b98457"/><stop offset="1" stop-color="#6e4630"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffe9a8" stop-opacity="0.9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="86" cy="113" rx="64" ry="11" fill="#1b2a3f" opacity="0.45" filter="url(#shadow)"/>
+  <path d="M19 75 C20 95 45 111 80 112 C115 111 141 98 142 76 L142 70 L19 70 Z" fill="url(#side)" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2.5"/>
+  <path d="M20 70 C17 56 36 43 60 41 C75 35 98 36 111 42 C131 45 146 56 141 71 C138 83 114 91 80 91 C48 91 23 83 20 70 Z" fill="url(#top)" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2.5"/>
+  <ellipse cx="106" cy="76" rx="17" ry="6" fill="#5fc4cc" stroke="#2b1f3a" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M75 62 a15 15 0 0 1 30 0 Z" fill="#d8f4fb" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2.5"/>
+  <path d="M44 60 L44 24" stroke="#f4f1ea" stroke-width="3"/>
+  <path d="M44 24 l-1.5 -18 h3 Z M44 24 l14 10 l-2 2 Z M44 24 l-14 10 l2 2 Z" fill="#fff" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="1.2"/>
+  <circle cx="75" cy="39" r="24" fill="url(#glow)"/>
+  <path d="M75 60 V42" stroke="#6e4630" stroke-width="5" stroke-linecap="round"/>
+  <path d="M56 37 C54 25 66 17 75 20 C85 15 98 23 95 35 C100 44 88 51 79 48 C70 52 56 48 56 37 Z" fill="#4f9a3f" stroke="#2b1f3a" stroke-opacity="0.6" stroke-width="2.5"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "sovereigntree",
+  "private": true,
+  "version": "0.1.0",
+  "description": "SovereignTree — a living map of eco-villages, intentional communities and new-earth gatherings. Sacred reciprocity.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@rive-app/canvas-lite": "^2.44.0",
+    "leaflet": "^1.9.4",
+    "mapbox-gl": "^3.32.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

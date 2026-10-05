@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!--
+    PLACEHOLDER village asset, tier 1 (far zoom, icon). 64x64 @1x, ground anchor (32, 56).
+    Reads as a single glyph: island disc + sovereign tree. No small detail.
+  -->
+  <defs>
+    <filter id="shadow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="2.5"/></filter>
+  </defs>
+  <ellipse cx="34" cy="57" rx="22" ry="5" fill="#1b2a3f" opacity="0.45" filter="url(#shadow)"/>
+  <path d="M8 40 C8 50 18 56 32 56 C46 56 56 50 56 40 Z" fill="#9a6a45" stroke="#2b1f3a" stroke-opacity="0.65" stroke-width="2"/>
+  <ellipse cx="32" cy="40" rx="24" ry="10" fill="#7fc25c" stroke="#2b1f3a" stroke-opacity="0.65" stroke-width="2"/>
+  <path d="M32 42 V26" stroke="#6e4630" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 22 C17 12 27 6 32 9 C38 5 48 11 46 21 C50 29 40 33 34 31 C27 35 18 31 18 22 Z" fill="#4f9a3f" stroke="#2b1f3a" stroke-opacity="0.65" stroke-width="2"/>
+  <circle cx="27" cy="19" r="1.6" fill="#ffe9a8"/><circle cx="38" cy="16" r="1.6" fill="#ffe9a8"/>
+</svg>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1f6f78" />
+    <title>SovereignTree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" data-layer="explore">
+      <div id="explore-map" class="layer layer--explore"></div>
+      <div id="particles" class="particles" aria-hidden="true"></div>
+      <div id="real-map" class="layer layer--real"></div>
+
+      <header class="topbar">
+        <button id="back" class="btn btn--round topbar__back" type="button" aria-label="Back to the globe">←</button>
+        <div class="brand">
+          <span class="brand__name">SovereignTree</span>
+          <span class="brand__motto">sacred reciprocity</span>
+        </div>
+      </header>
+
+      <p id="real-notice" class="real-notice" hidden>
+        Preview tiles (OpenStreetMap). Set <code>VITE_MAPBOX_TOKEN</code> to use Mapbox GL.
+      </p>
+
+      <section id="card" class="card" aria-hidden="true" aria-live="polite">
+        <div class="card__grip" aria-hidden="true"></div>
+        <button class="card__close btn btn--round" type="button" aria-label="Close">✕</button>
+        <div class="card__body"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
